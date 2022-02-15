@@ -1,0 +1,44 @@
+#!/bin/zsh
+# -*- coding: utf-8 -*-
+
+##
+# Z shell INITIALIZATION FILE
+##
+
+##
+# NOTICE:
+#   Launched as login shell
+#     1) ~/.zshenv
+#     2) ~/.zprofile
+#     3) ~/.zshrc
+#     4) ~/.zlogin
+#   Launched as interactive shell (not as login shell)
+#     1) ~/.zshenv
+#     2) ~/.zshrc
+#   Execute zsh script
+#     1) ~/.zshenv
+#   Logout zsh launched as login shell
+#     1) ~/.zlogout
+##
+
+
+zsh_initdir=~/.zsh
+
+zsh_path=${zsh_initdir}/path.zshenv
+zsh_shell=${zsh_initdir}/shell.zshenv
+zsh_environment=${zsh_initdir}/environment.zshenv
+
+
+if [ -r ${zsh_path} ]; then 
+    source ${zsh_path}
+fi
+
+
+if [ -r ${zsh_shell} ]; then
+    source ${zsh_shell}
+fi
+
+
+if [ -r ${zsh_environment} ]; then
+    source ${zsh_environment}
+fi

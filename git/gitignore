@@ -1,0 +1,21 @@
+# Python
+.venv/
+
+# emacs generating files
+*~
+*.orig
+.ensime
+.ensime_lucene
+auto-save-list
+
+# other vcs files
+.svn
+.hg
+.hgignore
+
+# OS 
+.DS_Store
+Thumbs.db
+
+# Others
+TAGS
