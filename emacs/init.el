@@ -1,4 +1,6 @@
-;;; usep-package
+;;;
+;;; use-package
+;;;
 (package-initialize)
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
@@ -150,7 +152,9 @@
 (global-set-key (kbd "C-c <tab>") 'ff-find-other-file)
 (global-unset-key (kbd "C-z"))
 
-;; global text scale mode
+;;;
+;;; Global text scale mode
+;;;
 (define-globalized-minor-mode
   global-text-scale-mode
   text-scale-mode
