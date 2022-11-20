@@ -318,7 +318,11 @@
 ;;;
 ;;; Theme
 ;;;
-(load-theme 'monokai t)
+(use-package monokai-theme
+  :ensure t
+  :config
+  (load-theme 'monokai t))
+
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
