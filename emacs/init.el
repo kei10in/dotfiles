@@ -1,3 +1,8 @@
+;;; usep-package
+(package-initialize)
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
+
 ;;; Register private configuration pathes to load-path
 (setq load-path
       (append (list
@@ -318,7 +323,8 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("24168c7e083ca0bbc87c68d3139ef39f072488703dcdd82343b8cab71c0f62a7" "9abe2b502db3ed511fea7ab84b62096ba15a3a71cdb106fd989afa179ff8ab8d" default))
- '(package-selected-packages '(monokai-pro-theme monokai-theme solarized-theme)))
+ '(package-selected-packages
+   '(use-package monokai-pro-theme monokai-theme solarized-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
