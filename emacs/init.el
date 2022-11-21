@@ -308,6 +308,8 @@
   ;; Set frame Transparency
   ;; (set-frame-parameter (selected-frame) 'alpha '(90 80))
   (add-to-list 'default-frame-alist '(alpha . (98 90)))
+  (add-to-list 'default-frame-alist '(width . 256))
+  (add-to-list 'default-frame-alist '(height . 100))
   )
 
 
