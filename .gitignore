@@ -3,3 +3,8 @@ Thumbs.db
 
 # Zshell
 zsh/zsh/aliases.hosts
+
+# Emacs
+emacs/elpa
+emacs/history
+emacs/recentf
