@@ -84,11 +84,6 @@
 (setq truncate-partial-width-windows t)
 
 
-;;; Show line and column numbers
-(line-number-mode t)
-(column-number-mode t)
-
-
 ;;; Show clock
 ;; (setq display-time-day-and-date t
 ;;       display-time-24hr-format t)
@@ -315,6 +310,7 @@
   (add-to-list 'default-frame-alist '(alpha . (98 90)))
   )
 
+
 ;;;
 ;;; Theme
 ;;;
@@ -323,6 +319,20 @@
   :config
   (load-theme 'monokai t))
 
+
+;;;
+;;; line number
+;;;
+
+;;; Show line and column numbers in mode line
+(line-number-mode t)
+(column-number-mode t)
+
+(use-package nlinum
+  :init
+  (global-nlinum-mode)
+  (setq nlinum-format "%4d")
+  )
 
 ;;;
 ;;; Vertico / Consult
@@ -580,7 +590,7 @@
  '(custom-safe-themes
    '("24168c7e083ca0bbc87c68d3139ef39f072488703dcdd82343b8cab71c0f62a7" "9abe2b502db3ed511fea7ab84b62096ba15a3a71cdb106fd989afa179ff8ab8d" default))
  '(package-selected-packages
-   '(marginalia orderless consult helm vertico use-package monokai-pro-theme monokai-theme solarized-theme)))
+   '(nlinum marginalia orderless consult helm vertico use-package monokai-pro-theme monokai-theme solarized-theme)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
