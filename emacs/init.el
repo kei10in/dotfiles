@@ -5,6 +5,10 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+
+
 ;;; Register private configuration pathes to load-path
 (setq load-path
       (append (list
